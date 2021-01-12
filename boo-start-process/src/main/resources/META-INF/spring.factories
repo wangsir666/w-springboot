@@ -1,0 +1,5 @@
+##ApplicationContextInitializer扩展
+#org.springframework.context.ApplicationContextInitializer=\
+#  com.cloud.springboot.initializer.MyApplicationContextInitializer,\
+#  com.cloud.springboot.initializer.MyApplicationContextInitializer,\
+#  com.cloud.springboot.initializer.MyApplicationContextInitializer1
