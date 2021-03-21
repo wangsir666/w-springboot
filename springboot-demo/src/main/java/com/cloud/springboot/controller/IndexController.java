@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Random;
 
 /**
@@ -18,6 +19,13 @@ import java.util.Random;
 public class IndexController {
 
     Random random = new Random();
+
+    @GetMapping("/hello")
+    public String hello(HttpServletRequest request){
+        String realPath = request.getSession().getServletContext().getRealPath("/local");
+        System.out.println(realPath);
+        return "ok...";
+    }
 
     @RequestMapping("/getInfo")
     public String getInfo(){

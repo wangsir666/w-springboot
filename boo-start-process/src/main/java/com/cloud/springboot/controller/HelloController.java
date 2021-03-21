@@ -21,6 +21,9 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello(HttpServletRequest request){
+
+        String realPath = request.getSession().getServletContext().getRealPath("/");
+        System.out.println(realPath);
         System.out.println("hello...start..");
 //        HttpSession session = request.getSession();
         HttpSession session = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).
